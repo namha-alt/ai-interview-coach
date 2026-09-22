@@ -379,16 +379,29 @@ st.markdown(
     }
 
     /* ========== CHAT INPUT ========== */
-    [data-testid="stChatInput"] {
+    [data-testid="stBottom"],
+    [data-testid="stBottom"] > div,
+    [data-testid="stBottomBlockContainer"] {
+        background-color: var(--surface) !important;
+    }
+
+    [data-testid="stChatInput"],
+    [data-testid="stChatInput"] > div,
+    [data-testid="stChatInput"] > div > div {
         background-color: var(--surface-container-lowest) !important;
-        border: 1px solid var(--outline-variant) !important;
-        border-radius: 12px !important;
+        border-color: var(--outline-variant) !important;
     }
 
     [data-testid="stChatInput"] textarea {
         background-color: transparent !important;
         color: var(--on-surface) !important;
         font-family: 'Inter', sans-serif !important;
+        -webkit-text-fill-color: var(--on-surface) !important;
+    }
+
+    [data-testid="stChatInput"] textarea::placeholder {
+        color: var(--outline) !important;
+        -webkit-text-fill-color: var(--outline) !important;
     }
 
     [data-testid="stChatInput"] button {
@@ -416,19 +429,22 @@ st.markdown(
     }
 
     /* ========== EXPANDER ========== */
-    .stExpander {
+    [data-testid="stExpander"] {
         background-color: var(--surface-container) !important;
         border: 1px solid var(--outline-variant) !important;
         border-radius: 12px !important;
+        overflow: hidden !important;
     }
 
-    .stExpander header,
-    [data-testid="stExpander"] summary {
+    [data-testid="stExpander"] details summary,
+    [data-testid="stExpander"] details summary:hover,
+    [data-testid="stExpander"] details summary * {
+        background-color: var(--surface-container-high) !important;
         color: var(--on-surface) !important;
         font-weight: 600 !important;
     }
 
-    .stExpander [data-testid="stExpanderDetails"] {
+    [data-testid="stExpander"] [data-testid="stExpanderDetails"] {
         background-color: var(--surface-container-low) !important;
     }
 
