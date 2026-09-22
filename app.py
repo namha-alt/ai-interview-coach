@@ -233,19 +233,26 @@ st.markdown(
         color: var(--on-surface) !important;
     }
 
-    [data-baseweb="popover"],
-    [data-baseweb="popover"] > div {
+    div[data-baseweb="popover"],
+    div[data-baseweb="popover"] > div,
+    div[data-baseweb="menu"],
+    ul[role="listbox"] {
         background-color: var(--surface-container-high) !important;
         border: 1px solid var(--outline-variant) !important;
     }
 
-    [data-baseweb="popover"] li,
-    [data-baseweb="popover"] ul li {
+    div[data-baseweb="menu"] li,
+    ul[role="listbox"] li,
+    li[role="option"] {
         background-color: var(--surface-container-high) !important;
         color: var(--on-surface) !important;
     }
 
-    [data-baseweb="popover"] li:hover {
+    div[data-baseweb="menu"] li:hover,
+    ul[role="listbox"] li:hover,
+    li[role="option"]:hover,
+    li[role="option"][aria-selected="true"],
+    li[role="option"][aria-selected="true"]:hover {
         background-color: var(--surface-bright) !important;
     }
 
