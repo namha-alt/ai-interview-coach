@@ -129,8 +129,8 @@ def make_radar_chart(avg_scores: dict[str, float]) -> bytes:
         pad=20,
     )
 
-    # Tick label colors
-    ax.tick_params(colors=label_color)
+    # Tick label colors and padding
+    ax.tick_params(colors=text_color, pad=25)
 
     plt.tight_layout()
 
