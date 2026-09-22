@@ -167,6 +167,16 @@ st.markdown(
         transform: translateY(-2px) !important;
     }
 
+    /* Catch all for secondary / default buttons to ensure they aren't white */
+    button[kind="secondary"],
+    [data-testid="baseButton-secondary"],
+    div[data-testid="stButton"] button {
+        background-color: var(--surface-container-high) !important;
+        color: var(--on-surface) !important;
+        border: 1px solid var(--outline-variant) !important;
+    }
+
+
     /* ========== TEXT INPUTS & TEXT AREAS ========== */
     .stTextInput > div > div > input,
     .stTextArea > div > div > textarea,
@@ -245,6 +255,12 @@ st.markdown(
     }
 
     .stSlider [data-baseweb="slider"] div {
+        color: var(--on-surface) !important;
+    }
+    
+    /* Remove the blue highlight box from the slider thumb value */
+    [data-baseweb="slider"] div[role="slider"] > div {
+        background-color: var(--surface-container-high) !important;
         color: var(--on-surface) !important;
     }
 
@@ -1415,9 +1431,9 @@ elif st.session_state.stage == "interview":
 
     # Render previous dialogue turns
     for idx, turn in enumerate(st.session_state.history):
-        with st.chat_message("assistant", avatar="AI"):
+        with st.chat_message("assistant"):
             st.markdown(f"**Question {idx + 1}:** {turn['question']}")
-        with st.chat_message("user", avatar="YOU"):
+        with st.chat_message("user"):
             st.markdown(turn["answer"])
 
     # Active Question Display
