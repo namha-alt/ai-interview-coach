@@ -251,22 +251,24 @@ st.markdown(
 
     /* ========== SLIDER ========== */
     .stSlider > div > div > div > div {
-        background-color: var(--primary-container) !important;
+        background-color: transparent !important;
     }
 
     .stSlider [data-baseweb="slider"] div {
         color: var(--on-surface) !important;
     }
-    
-    /* Remove the blue highlight box from the slider thumb value */
-    [data-baseweb="slider"] div[role="slider"] > div {
-        background-color: var(--surface-container-high) !important;
-        color: var(--on-surface) !important;
-    }
 
     [data-baseweb="slider"] [data-testid="stTickBarMin"],
     [data-baseweb="slider"] [data-testid="stTickBarMax"] {
+        background-color: transparent !important;
         color: var(--on-surface-variant) !important;
+    }
+
+    [data-baseweb="slider"] div[role="slider"] > div {
+        background-color: var(--surface-container-highest) !important;
+        color: var(--on-surface) !important;
+        padding: 2px 6px !important;
+        border-radius: 4px !important;
     }
 
     /* ========== FILE UPLOADER ========== */
