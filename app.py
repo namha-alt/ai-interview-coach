@@ -40,92 +40,128 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
-# Custom CSS for polished, modern UI
+# Custom CSS for polished, modern premium UI
 st.markdown(
     """
     <style>
-    /* Global styling enhancements */
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+    /* Global Typography & Body */
+    html, body, [class*="css"] {
+        font-family: 'Inter', sans-serif !important;
+    }
+    
+    /* Vibrant Gradient Headers */
     .main-header {
-        font-size: 2.2rem;
+        font-size: 2.8rem;
         font-weight: 800;
-        background: linear-gradient(90deg, #1E40AF 0%, #3B82F6 100%);
+        background: linear-gradient(135deg, #4F46E5 0%, #9333EA 50%, #EC4899 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        margin-bottom: 0.2rem;
+        margin-bottom: 0.5rem;
+        letter-spacing: -0.03em;
+        line-height: 1.2;
     }
     .sub-header {
-        font-size: 1.05rem;
-        color: #475569;
-        margin-bottom: 1.5rem;
+        font-size: 1.15rem;
+        color: #64748B;
+        margin-bottom: 2rem;
+        font-weight: 400;
+        line-height: 1.6;
     }
+    
+    /* Glassmorphism Cards */
     .card-box {
-        background-color: #F8FAFC;
-        border: 1px solid #E2E8F0;
-        border-radius: 10px;
-        padding: 1.2rem;
-        margin-bottom: 1rem;
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 16px;
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+        box-shadow: 0 4px 24px -2px rgba(15, 23, 42, 0.05);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        color: #0F172A !important;
+    }
+    .card-box:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 32px -4px rgba(15, 23, 42, 0.08);
+    }
+
+    /* Premium Skill Badges with Hover Micro-Animations */
+    .skill-badge-matched, .skill-badge-high, .skill-badge-med, .skill-badge-low {
+        display: inline-block;
+        font-weight: 600;
+        font-size: 0.85rem;
+        padding: 0.4rem 0.8rem;
+        border-radius: 9999px;
+        margin: 0.3rem;
+        transition: all 0.2s ease;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.02);
     }
     .skill-badge-matched {
-        display: inline-block;
-        background-color: #DCFCE7;
-        color: #166534;
-        font-weight: 600;
-        font-size: 0.85rem;
-        padding: 0.3rem 0.7rem;
-        border-radius: 20px;
-        margin: 0.25rem;
-        border: 1px solid #86EFAC;
+        background: linear-gradient(135deg, #DCFCE7 0%, #D1FAE5 100%);
+        color: #065F46 !important;
+        border: 1px solid #6EE7B7;
     }
     .skill-badge-high {
-        display: inline-block;
-        background-color: #FEE2E2;
-        color: #991B1B;
-        font-weight: 600;
-        font-size: 0.85rem;
-        padding: 0.3rem 0.7rem;
-        border-radius: 20px;
-        margin: 0.25rem;
+        background: linear-gradient(135deg, #FEE2E2 0%, #FECACA 100%);
+        color: #991B1B !important;
         border: 1px solid #FCA5A5;
     }
     .skill-badge-med {
-        display: inline-block;
-        background-color: #FEF3C7;
-        color: #92400E;
-        font-weight: 600;
-        font-size: 0.85rem;
-        padding: 0.3rem 0.7rem;
-        border-radius: 20px;
-        margin: 0.25rem;
-        border: 1px solid #FDE68A;
+        background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
+        color: #92400E !important;
+        border: 1px solid #FCD34D;
     }
     .skill-badge-low {
-        display: inline-block;
-        background-color: #E0F2FE;
-        color: #075985;
-        font-weight: 600;
-        font-size: 0.85rem;
-        padding: 0.3rem 0.7rem;
-        border-radius: 20px;
-        margin: 0.25rem;
-        border: 1px solid #BAE6FD;
+        background: linear-gradient(135deg, #E0F2FE 0%, #BAE6FD 100%);
+        color: #075985 !important;
+        border: 1px solid #7DD3FC;
     }
+    
+    .skill-badge-matched:hover, .skill-badge-high:hover, .skill-badge-med:hover, .skill-badge-low:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    /* Interview & Demo Components */
     .interview-q-box {
-        background: linear-gradient(135deg, #EFF6FF 0%, #F8FAFC 100%);
-        border-left: 5px solid #2563EB;
-        padding: 1.2rem 1.5rem;
-        border-radius: 8px;
-        margin: 1.2rem 0;
-        font-size: 1.15rem;
+        background: linear-gradient(135deg, #F8FAFC 0%, #F1F5F9 100%);
+        border-left: 6px solid #6366F1;
+        padding: 1.5rem 1.8rem;
+        border-radius: 12px;
+        margin: 1.5rem 0;
+        font-size: 1.25rem;
         font-weight: 600;
-        color: #1E293B;
-        box-shadow: 0 2px 6px rgba(37, 99, 235, 0.08);
+        color: #0F172A !important;
+        box-shadow: 0 8px 16px -4px rgba(99, 102, 241, 0.15);
+        line-height: 1.5;
     }
     .demo-box {
-        background-color: #F0FDF4;
-        border: 1px solid #BBF7D0;
-        border-radius: 8px;
-        padding: 0.8rem 1.2rem;
-        margin-bottom: 0.8rem;
+        background: linear-gradient(135deg, #F0FDF4 0%, #DCFCE7 100%);
+        border: 1px solid #86EFAC;
+        border-radius: 12px;
+        padding: 1.2rem 1.5rem;
+        margin-bottom: 1rem;
+        box-shadow: 0 4px 12px rgba(34, 197, 94, 0.08);
+        transition: transform 0.2s ease;
+        color: #064E3B !important;
+        font-weight: 500;
+    }
+    .demo-box:hover {
+        transform: translateX(4px);
+    }
+    
+    /* Streamlit Global Overrides for Premium feel */
+    .stButton > button {
+        border-radius: 8px !important;
+        font-weight: 600 !important;
+        transition: all 0.3s ease !important;
+    }
+    .stButton > button:hover {
+        transform: translateY(-1px) !important;
+        box-shadow: 0 6px 16px rgba(0,0,0,0.1) !important;
     }
     </style>
     """,
@@ -481,7 +517,7 @@ elif st.session_state.stage == "interview":
         sample_ans = DEMO_ANSWERS[current_idx]
         with st.container():
             st.markdown(
-                f'<div class="demo-box">💡 <b>5-Min Presentation Quick-Answer:</b><br><i>"{sample_ans}"</i></div>',
+                f'<div class="demo-box"><i>"{sample_ans}"</i></div>',
                 unsafe_allow_html=True,
             )
             if st.button("⚡ 1-Click Submit Demo Answer", key=f"demo_btn_{current_idx}", type="secondary", use_container_width=True):

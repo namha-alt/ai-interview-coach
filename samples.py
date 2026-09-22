@@ -1,67 +1,65 @@
 """Sample resume, job description text, and 5-minute presentation demo script."""
 
 SAMPLE_RESUME = """
-ALEXANDER RIVERA
-Senior Full Stack Engineer | alex.rivera@example.com | San Francisco, CA | linkedin.com/in/alex-rivera-dev
-
-PROFESSIONAL SUMMARY
-Versatile Full Stack Software Engineer with 6+ years of experience designing and shipping scalable web applications and distributed backend systems. Proficient in Python, FastAPI, Node.js, React, and AWS cloud infrastructure. Passionate about system design, performance optimization, and clean architecture.
-
-TECHNICAL SKILLS
-- Languages: Python, JavaScript, TypeScript, SQL, Bash
-- Frameworks & Libraries: FastAPI, Django, React, Redux, Express.js, Next.js, PyTest
-- Databases & Caching: PostgreSQL, Redis, MongoDB
-- Cloud & DevOps: AWS (EC2, S3, RDS, Lambda), Docker, GitHub Actions, Linux
-- Concepts: RESTful APIs, Microservices, CI/CD, Agile/Scrum, Distributed Caching
-
-WORK EXPERIENCE
-Senior Software Engineer | CloudScale Tech | Jan 2022 – Present
-- Architected and deployed microservices backend using FastAPI and PostgreSQL, serving 1.5M daily active users with 99.98% uptime.
-- Optimized database queries and implemented distributed Redis caching, reducing p99 API response latency by 42% (from 320ms to 185ms).
-- Led a team of 4 engineers in migrating legacy monolith endpoints to containerized services on Docker and AWS ECS.
-- Spearheaded CI/CD automation with GitHub Actions, cutting average deployment cycle from 45 minutes to 8 minutes.
-
-Software Engineer | Apex Digital Solutions | Jun 2019 – Dec 2021
-- Developed interactive web portals using React, TypeScript, and TailwindCSS, improving user conversion rates by 18%.
-- Integrated third-party payment gateways (Stripe, PayPal) and webhook listeners handling $2M+ in monthly transaction volume.
-- Collaborated with product designers and backend engineers to implement OAuth2 / JWT authentication pipelines.
+ALEX TAYLOR
+Computer Science Student | alex.taylor@example.edu | github.com/alextaylor
 
 EDUCATION
-B.S. in Computer Science | University of California, Davis | 2015 – 2019
+B.S. in Computer Science | State University | Expected May 2027
+Relevant Coursework: Data Structures, Algorithms, Web Development, Databases
+
+TECHNICAL SKILLS
+- Languages: Python, Java, JavaScript, HTML/CSS, SQL
+- Frameworks & Tools: React, Flask, Node.js, Git, GitHub, VS Code
+- Concepts: REST APIs, Object-Oriented Programming, Agile Teamwork
+
+ACADEMIC & PERSONAL PROJECTS
+Task Manager Web App (React, Python, Flask, SQLite)
+- Built a full-stack to-do list application to help students track assignments.
+- Created a REST API with Flask to handle user data and store tasks in a SQLite database.
+- Designed a responsive frontend using React and CSS, allowing users to easily filter tasks.
+- Used Git for version control and collaborated with a partner using GitHub pull requests.
+
+Live Weather Dashboard (JavaScript, HTML, CSS)
+- Developed a web dashboard that fetches and displays live weather data using a public REST API.
+- Implemented asynchronous JavaScript (Promises/Fetch) to handle API responses without freezing the page.
+
+EXPERIENCE
+Teaching Assistant - Intro to Programming | State University | Aug 2025 - Present
+- Help students debug Python code and explain core concepts like loops and functions during weekly lab sessions.
 """
 
 SAMPLE_JD = """
-Staff / Senior AI Systems Engineer
-Company: NextGen AI Platform Inc.
-Location: Remote / Hybrid
+Software Engineering Intern (Summer)
+Company: TechNova Solutions
+Location: Remote
 
 About the Role:
-We are seeking a Senior AI Systems Engineer to join our core intelligence team. You will lead the design and implementation of production AI microservices, high-throughput LLM evaluation pipelines, and scalable cloud infrastructure on Azure and Kubernetes.
+We are looking for an enthusiastic Software Engineering Intern to join our web development team. You will work alongside experienced engineers to build features for our internal tools and customer-facing web applications.
 
 Responsibilities:
-- Architect, build, and deploy low-latency, scalable AI microservices in Python (FastAPI / AsyncIO).
-- Manage container orchestration, service mesh, and autoscaling across Kubernetes (AKS) clusters using Terraform.
-- Implement streaming LLM workflows, retrieval-augmented generation (RAG) pipelines, and asynchronous vector search indexing.
-- Establish strict observability, telemetry, and load testing using Prometheus, Grafana, and OpenTelemetry.
-- Mentor junior and mid-level engineers, conduct code reviews, and drive architectural decision records (ADRs).
+- Write clean, maintainable code in Python or JavaScript.
+- Assist in developing frontend components using React and backend APIs.
+- Participate in daily stand-ups and sprint planning meetings.
+- Debug and fix minor bugs reported by the QA team.
 
 Requirements:
-- 5+ years of production software engineering experience in Python or Go.
-- Deep expertise with Kubernetes (K8s), Helm, and Infrastructure as Code (Terraform).
-- Hands-on experience with Microsoft Azure AI Foundry, Azure OpenAI Service, or LangChain/LlamaIndex.
-- Strong knowledge of vector databases (e.g. Qdrant, Pinecone, pgvector) and distributed message brokers (Kafka or RabbitMQ).
-- Excellent communication skills, system design instincts, and familiarity with STAR-method behavioral leadership.
+- Currently pursuing a B.S. in Computer Science or a related technical field.
+- Solid understanding of core programming concepts (Data Structures, OOP).
+- Basic familiarity with web development (HTML, CSS, JavaScript) or backend logic (Python, Java).
+- Experience with version control (Git/GitHub) through class projects or hackathons.
+- Strong problem-solving skills and a willingness to learn and ask questions.
 """
 
 # Relatable 3-question presentation demo script for quick 5-minute demos
 DEMO_QUESTIONS = [
-    "Can you tell me about a major software project you built recently, why you chose that tech stack, and what part you found most challenging?",
-    "Describe a difficult bug or roadblock you ran into while developing a feature, and the exact steps you took to debug and resolve it.",
-    "Tell me about a time you worked on a team or academic project where there was a disagreement or someone fell behind on a deadline. How did you handle it?",
+    "Can you tell me about a recent coding project you built, why you chose the tools you used, and what you learned from it?",
+    "Describe a time you ran into a tough bug in your code. How did you figure it out and fix it?",
+    "Tell me about a time you worked on a group project for a class and someone wasn't doing their share of the work. How did you handle it?",
 ]
 
 DEMO_ANSWERS = [
-    "I built a full-stack web application using React and FastAPI. I chose React for component-based UI and FastAPI for fast asynchronous API endpoints. The most challenging part was designing clean REST endpoints and handling database state efficiently.",
-    "I ran into an API timeout bug when handling concurrent requests. I used logging and Postman to isolate the issue, traced it to an unindexed database query, added an index on the user ID column, and reduced latency from 1.2s to 80ms.",
-    "During a team hackathon, our backend teammate struggled with authentication, putting our submission deadline at risk. I scheduled a quick pair-programming session, simplified the auth flow, redistributed tasks, and we successfully delivered the working project on time.",
+    "For my web development class, I built a full-stack Task Manager app. I chose React for the frontend because I wanted to learn component-based UI, and Python with Flask for the backend since I was already comfortable with Python from my introductory classes. The most challenging part was connecting the frontend to the backend API, but I learned a lot about how HTTP requests work and how to correctly parse JSON data.",
+    "While building my weather dashboard project, I had a bug where the API data wasn't loading on the page and the screen stayed blank. I started by using `console.log` to print the API response, but nothing showed up. I then opened the browser's Network tab and realized the API request was actually failing due to a typo in the URL. Once I fixed the URL string, the data loaded perfectly. It taught me how to use developer tools to debug network issues.",
+    "During a group software engineering project, one of our teammates missed a deadline for designing our database schema. Instead of getting upset or doing the work for them, I reached out to them privately. I found out they were really overwhelmed with midterms in another class. I offered to hop on a Zoom call and pair-program with them for an hour to get the database set up. We finished it together, and it helped them get back on track for the rest of the project.",
 ]
