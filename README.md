@@ -1,4 +1,4 @@
-# 🎯 AI Interview Coach
+# AI Interview Coach
 
 An intelligent, interactive mock interview and coaching application built with **Streamlit** and powered by **Azure AI Foundry** (`gpt-4o` / `gpt-4.1`).
 
@@ -6,7 +6,7 @@ AI Interview Coach automates end-to-end interview preparation: analyzing resume-
 
 ---
 
-## 🌟 Key Features
+## Key Features
 
 1. **Pre-Interview Gap Analysis (Stage 1 & 2)**
    - Extract candidate profile directly from PDF resumes using `pypdf`.
@@ -33,12 +33,12 @@ AI Interview Coach automates end-to-end interview preparation: analyzing resume-
    - **Executive Coaching Report**: Overall verdict, ranked skill gaps, ATS resume bullet rewrites, and a structured 2-Week Action Plan.
 
 5. **Multi-Format Export**
-   - 📥 **Markdown (`.md`)**: Full report with markdown tables and timestamps.
-   - 📄 **PDF (`.pdf`)**: Multi-page report built with `fpdf2`, embedding metadata badges, score table, and the radar chart image.
+   - **Markdown (`.md`)**: Full report with markdown tables and timestamps.
+   - **PDF (`.pdf`)**: Multi-page report built with `fpdf2`, embedding metadata badges, score table, and the radar chart image.
 
 ---
 
-## 🏗️ Architecture & Data Flow
+## Architecture & Data Flow
 
 ```text
 ┌─────────────────────────────────────────────────────────────────────────┐
@@ -74,7 +74,7 @@ AI Interview Coach automates end-to-end interview preparation: analyzing resume-
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 azure_project/
@@ -98,7 +98,7 @@ azure_project/
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### 1. Prerequisites
 - **Python 3.10+** (Tested on Python 3.12)
@@ -153,7 +153,7 @@ Open your browser at `http://localhost:8501`.
 
 ---
 
-## 🧪 Running Automated Tests
+## Running Automated Tests
 
 Run the test suite:
 ```bash
@@ -166,7 +166,7 @@ pytest tests/
 
 ---
 
-## 📸 App Walkthrough & Stages
+## App Walkthrough & Stages
 
 1. **Setup Screen**:
    - Upload your resume PDF and paste the target Job Description.
@@ -188,14 +188,14 @@ pytest tests/
 
 ---
 
-## 🛡️ Responsible AI & Privacy Statement
+## Responsible AI & Privacy Statement
 
 - **Coaching Purpose Only**: AI Interview Coach is designed strictly as a self-study and coaching tool to help candidates prepare for interviews. It is **not** an automated hiring tool and should not be used to make employment decisions.
 - **In-Session Ephemeral Data**: Candidate resumes, job descriptions, and interview transcripts are processed entirely in memory (`st.session_state`) during the user's active session. No candidate data is permanently stored or persisted to disk.
 
 ---
 
-## 🎥 Demo Video
+## Demo Video
 
 https://youtu.be/_VrtwRh8Xts
 
