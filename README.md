@@ -197,4 +197,8 @@ pytest tests/
 
 ## 🎥 Demo Video
 
-> *Link to demo video / walkthrough recording: [Demo Video URL]*
+https://youtu.be/_VrtwRh8Xts
+
+## Working Prototype
+
+https://ai-interview-coach-azure.streamlit.app
