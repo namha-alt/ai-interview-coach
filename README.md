@@ -1,6 +1,6 @@
 # AI Interview Coach
 
-An intelligent, interactive mock interview and coaching application built with **Streamlit** and powered by **Azure AI Foundry** (`gpt-4o` / `gpt-4.1`).
+An intelligent, interactive mock interview and coaching application built with **Streamlit** and powered by **Azure AI Foundry** (`gpt-5-mini`).
 
 AI Interview Coach automates end-to-end interview preparation: analyzing resume-to-JD alignment, identifying critical skill gaps, conducting dynamic text-only mock interviews that adapt to the candidate's weaknesses, silently scoring answers across 4 rubric dimensions, and generating exportable coaching reports with radar charts, score tables, bullet rewrites, and a personalized 2-week action plan.
 
@@ -68,7 +68,7 @@ AI Interview Coach automates end-to-end interview preparation: analyzing resume-
                                           ▼
                        ┌─────────────────────────────────────┐
                        │          Azure AI Foundry           │
-                       │    (Azure OpenAI gpt-4o Service)    │
+                       │    (Azure OpenAI gpt-5-mini Service)    │
                        └─────────────────────────────────────┘
 ```
 
@@ -102,7 +102,7 @@ azure_project/
 
 ### 1. Prerequisites
 - **Python 3.10+** (Tested on Python 3.12)
-- An active **Azure AI Foundry** or **Azure OpenAI** deployment with `gpt-4o` or `gpt-4.1`.
+- An active **Azure AI Foundry** or **Azure OpenAI** deployment with `gpt-5-mini`.
 
 ### 2. Installation
 
@@ -139,7 +139,7 @@ Edit `.env` and provide your Azure OpenAI credentials:
 ```env
 AZURE_OPENAI_ENDPOINT=https://your-resource-name.openai.azure.com/
 AZURE_OPENAI_API_KEY=your-azure-api-key-here
-AZURE_OPENAI_DEPLOYMENT=gpt-4o
+AZURE_OPENAI_DEPLOYMENT=gpt-5-mini
 AZURE_OPENAI_API_VERSION=2024-10-21
 ```
 
